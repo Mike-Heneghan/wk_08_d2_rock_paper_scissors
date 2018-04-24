@@ -4,7 +4,6 @@ public class Paper extends Hand {
 
     public Paper(){
         super("Paper");
-        getTrumps().add(new Rock());
     }
 
 

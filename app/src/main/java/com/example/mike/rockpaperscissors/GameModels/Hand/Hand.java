@@ -20,6 +20,10 @@ public abstract class Hand {
         return trumps;
     }
 
+    public void addTrump(Hand hand) {
+        trumps.add(hand);
+    }
+
     public ArrayList<String> getTrumpsNames(){
         ArrayList<String> trumpNames = new ArrayList<>();
         for (Hand trump: trumps) {
