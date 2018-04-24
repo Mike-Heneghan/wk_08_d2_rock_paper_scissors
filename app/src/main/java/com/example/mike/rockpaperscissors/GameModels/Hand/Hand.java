@@ -16,6 +16,10 @@ public abstract class Hand {
         return type.getName();
     }
 
+    public HandType getType() {
+        return type;
+    }
+
     public ArrayList<HandType> getTrumps() {
         return trumps;
     }
