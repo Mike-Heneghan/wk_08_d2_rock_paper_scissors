@@ -19,4 +19,12 @@ public abstract class Hand {
     public ArrayList<Hand> getTrumps() {
         return trumps;
     }
+
+    public ArrayList<String> getTrumpsNames(){
+        ArrayList<String> trumpNames = new ArrayList<>();
+        for (Hand trump: trumps) {
+            trumpNames.add(trump.getName());
+        }
+        return trumpNames;
+    }
 }

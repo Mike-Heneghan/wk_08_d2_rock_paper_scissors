@@ -1,4 +1,11 @@
 package com.example.mike.rockpaperscissors.GameModels.Hand;
 
-public class Paper {
+public class Paper extends Hand {
+
+    public Paper(){
+        super("Paper");
+        getTrumps().add(new Rock());
+    }
+
+
 }
