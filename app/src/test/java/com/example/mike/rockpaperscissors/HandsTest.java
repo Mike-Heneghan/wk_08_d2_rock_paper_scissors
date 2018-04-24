@@ -1,5 +1,6 @@
 package com.example.mike.rockpaperscissors;
 
+import com.example.mike.rockpaperscissors.GameModels.Hand.HandType;
 import com.example.mike.rockpaperscissors.GameModels.Hand.Paper;
 import com.example.mike.rockpaperscissors.GameModels.Hand.Rock;
 import com.example.mike.rockpaperscissors.GameModels.Hand.Scissors;
@@ -42,17 +43,10 @@ public class HandsTest {
 
     @Test
     public void canAddTrumps() {
-        rock.addTrump(scissors);
-        scissors.addTrump(paper);
+        rock.addTrump(HandType.SCISSORS);
+        scissors.addTrump(HandType.PAPER);
         assertEquals(1, rock.getTrumps().size());
         assertEquals(1, scissors.getTrumps().size());
     }
 
-    @Test
-    public void canGetStringArrayList() {
-        rock.addTrump(scissors);
-        rock.addTrump(paper);
-        assertEquals(2, rock.getTrumpsNames().size());
-        assertEquals("Scissors", rock.getTrumpsNames().get(0));
-    }
 }

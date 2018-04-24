@@ -4,31 +4,25 @@ import java.util.ArrayList;
 
 public abstract class Hand {
 
-    private String name;
-    private ArrayList<Hand> trumps;
+    private HandType type;
+    private ArrayList<HandType> trumps;
 
-    public Hand(String name){
-        this.name = name;
+    public Hand(HandType type){
+        this.type = type;
         this.trumps = new ArrayList<>();
     }
 
     public String getName() {
-        return name;
+        return type.getName();
     }
 
-    public ArrayList<Hand> getTrumps() {
+    public ArrayList<HandType> getTrumps() {
         return trumps;
     }
 
-    public void addTrump(Hand hand) {
+    public void addTrump(HandType hand) {
         trumps.add(hand);
     }
 
-    public ArrayList<String> getTrumpsNames(){
-        ArrayList<String> trumpNames = new ArrayList<>();
-        for (Hand trump: trumps) {
-            trumpNames.add(trump.getName());
-        }
-        return trumpNames;
-    }
+
 }
