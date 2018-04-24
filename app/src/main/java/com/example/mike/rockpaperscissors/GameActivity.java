@@ -76,21 +76,21 @@ public class GameActivity extends AppCompatActivity {
     public void onClickScissorsButton(View button){
         game.getHuman().setHand(new Scissors());
         game.cpuChoice();
-        game.getResult();
+        gameResult.setText(game.getResult());
         refresh();
     }
 
     public void onClickRockButton(View button){
         game.getHuman().setHand(new Rock());
         game.cpuChoice();
-        game.getResult();
+        gameResult.setText(game.getResult());
         refresh();
     }
 
     public void onClickPaperButton(View button){
         game.getHuman().setHand(new Paper());
         game.cpuChoice();
-        game.getResult();
+        gameResult.setText(game.getResult());
         refresh();
     }
 

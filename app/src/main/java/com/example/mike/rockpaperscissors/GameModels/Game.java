@@ -37,10 +37,6 @@ public class Game {
         cpu.chooseHand(cpuChoices);
     }
 
-    public void playerChoice(Hand hand){
-        human.setHand(hand);
-    }
-
     private Contestant comparePlayers() {
         if (human.getHand().getType() == cpu.getHand().getType()) {
             return null;
