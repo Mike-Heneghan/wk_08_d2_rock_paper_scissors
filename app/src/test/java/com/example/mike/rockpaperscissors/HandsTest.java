@@ -37,16 +37,16 @@ public class HandsTest {
 
     @Test
     public void hasTrumps() {
-        assertEquals(0, rock.getTrumps().size());
-        assertEquals(0, scissors.getTrumps().size());
+        assertEquals(1, rock.getTrumps().size());
+        assertEquals(1, scissors.getTrumps().size());
     }
 
     @Test
     public void canAddTrumps() {
         rock.addTrump(HandType.SCISSORS);
         scissors.addTrump(HandType.PAPER);
-        assertEquals(1, rock.getTrumps().size());
-        assertEquals(1, scissors.getTrumps().size());
+        assertEquals(2, rock.getTrumps().size());
+        assertEquals(2, scissors.getTrumps().size());
     }
 
 }
