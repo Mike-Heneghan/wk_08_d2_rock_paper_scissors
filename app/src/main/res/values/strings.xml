@@ -7,4 +7,7 @@
     <string name="cpuName"></string>
     <string name="cpuWinCount"></string>
     <string name="gameResult"></string>
+    <string name="scissorsIcon">Scissors Icon</string>
+    <string name="rockIcon">Rock Icon</string>
+    <string name="paperIcon">Paper Icon</string>
 </resources>

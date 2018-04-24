@@ -2,6 +2,7 @@ package com.example.mike.rockpaperscissors;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -38,7 +39,7 @@ public class GameActivity extends AppCompatActivity {
         this.playerHand = findViewById(R.id.playerHandTextViewID);
         this.cpuName = findViewById(R.id.cpuNameTextViewID);
         this.cpuWinCount = findViewById(R.id.cpuWinCountTextViewID);
-        this.cpuHand = findViewById(R.id.playerHandTextViewID);
+        this.cpuHand = findViewById(R.id.cpuHandTextViewID);
         this.gameResult = findViewById(R.id.resultTextViewID);
         this.scissorsButton = findViewById(R.id.scissorsButtonID);
         this.paperButton = findViewById(R.id.paperButtonID);
@@ -69,7 +70,28 @@ public class GameActivity extends AppCompatActivity {
     }
 
     public void cpuChoice(){
-        game.
+        game.cpuChoice();
+    }
+
+    public void onClickScissorsButton(View button){
+        game.getHuman().setHand(new Scissors());
+        game.cpuChoice();
+        game.getResult();
+        refresh();
+    }
+
+    public void onClickRockButton(View button){
+        game.getHuman().setHand(new Rock());
+        game.cpuChoice();
+        game.getResult();
+        refresh();
+    }
+
+    public void onClickPaperButton(View button){
+        game.getHuman().setHand(new Paper());
+        game.cpuChoice();
+        game.getResult();
+        refresh();
     }
 
 

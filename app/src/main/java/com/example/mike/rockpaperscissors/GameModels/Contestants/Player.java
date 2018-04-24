@@ -5,4 +5,5 @@ public class Player extends Contestant {
         super("Human");
     }
 
+
 }
