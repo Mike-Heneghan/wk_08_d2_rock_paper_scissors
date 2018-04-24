@@ -17,8 +17,8 @@ public abstract class Contestant {
         return name;
     }
 
-    public int getWinCount() {
-        return winCount;
+    public String getWinCount() {
+        return (": " + winCount);
     }
 
     public void incrementWinCount() {
